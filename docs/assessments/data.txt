@@ -1,0 +1,33 @@
+class AssessmentData:
+    Stores data of a single assessement.
+
+    Contains the public fields:
+        int id, level, sublevel
+        AssessmentType type
+        String word2, word3
+        String? word1, word4, word5, pic1, pic2, pic3, pic4, pic5
+
+enum AssessmentType:
+    Represents the different types of assessment.
+    
+    Has the following values:
+    - pictureWord
+    - pictureWordDrag
+    - fillSentenceTwo
+    - fillSentenceThree
+
+function loadAssessment(int? level, int? sublevel, AssessmentType? type):
+    A function that returns a stream of AssessmentData widgets, filtered by the arguments given.
+    
+    Does so by: 
+    - Reading from assessments.csv
+    - Creating an instance of AssessmentData for each row in the csv
+    - Addding it to the stream if the argument values match the corresponding AssessmentData fields.
+
+    Arguments:
+    - int? level: The level of assessments to display.
+    - int? sublevel: The sublevel of assessments to display.
+    - AssessmentType? type: The type of assessment to display.
+
+    Return value: Stream<AssessmentData>
+        A stream of all the assessments that have the same level, sublevel, and type as given in the arguments.

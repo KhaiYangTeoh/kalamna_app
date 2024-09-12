@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg18"
+   width="200"
+   height="200"
+   viewBox="0 0 200 200"
+   sodipodi:docname="5_lf1.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview487"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="2.7780542"
+     inkscape:cx="217.59835"
+     inkscape:cy="91.790867"
+     inkscape:window-width="1700"
+     inkscape:window-height="1396"
+     inkscape:window-x="8"
+     inkscape:window-y="28"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg18" />
+  <defs
+     id="defs22" />
+  <g
+     id="g496"
+     transform="matrix(1.3333333,0,0,-1.3333333,-51.181196,409.93639)">
+    <g
+       id="g560"
+       transform="translate(78.6179,210.4568)"
+       clip-path="none">
+      <path
+         d="m 0,0 h -1.394 c -2.109,0 -3.714,0.548 -4.813,1.646 -1.097,1.097 -1.647,2.449 -1.647,4.054 0,1.434 0.488,2.764 1.458,3.989 0.971,1.224 2.639,1.837 5.002,1.837 h 1.52 c 16.296,0 30.609,2.787 42.938,8.36 l 4.433,2.027 c 3.377,1.602 6.333,2.827 8.867,3.672 -2.787,1.014 -5.785,2.237 -8.993,3.674 -4.054,1.856 -8.255,3.566 -12.602,5.129 -4.351,1.562 -8.508,2.343 -12.477,2.343 -6.671,0 -12.33,-0.971 -16.973,-2.913 l 1.774,10.387 c 4.053,1.856 9.161,2.786 15.326,2.786 5.403,0 10.596,-0.887 15.579,-2.659 4.981,-1.774 9.88,-3.801 14.692,-6.081 5.827,-2.618 10.006,-4.265 12.54,-4.939 2.534,-0.677 5.023,-1.014 7.473,-1.014 H 77.39 L 75.616,21.786 H 73.59 c -5.826,0 -13.173,-2.704 -22.039,-8.107 C 42.432,8.359 33.965,4.75 26.155,2.85 18.344,0.95 9.626,0 0,0"
+         style="fill:#f91536;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path562" />
+    </g>
+  </g>
+</svg>

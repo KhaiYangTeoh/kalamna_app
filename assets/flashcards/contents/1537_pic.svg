@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg159769"
+   width="400"
+   height="400"
+   viewBox="0 0 400 400"
+   sodipodi:docname="1537_pic.pdf"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs159773">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath159789">
+      <path
+         d="M 0,0 H 123.04535 V -198.30003 H 0 Z"
+         clip-rule="evenodd"
+         id="path159787" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath159799">
+      <path
+         d="M 0,-594.9 H 369.13601 V 594.9 H 0 Z"
+         id="path159797" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview159771"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
+  <g
+     id="g159775"
+     inkscape:groupmode="layer"
+     inkscape:label="1537_pic79"
+     transform="matrix(1.3333333,0,0,-1.3333333,0,400)">
+    <g
+       id="g159777">
+      <g
+         id="g159779">
+        <g
+           id="g159781"
+           transform="translate(88.47732,249.15001)">
+          <g
+             id="g159783">
+            <g
+               id="g159785"
+               clip-path="url(#clipPath159789)">
+              <g
+                 id="g159791"
+                 transform="matrix(0.33333,0,0,0.33333,0,-66.10002)">
+                <g
+                   id="g159793">
+                  <g
+                     id="g159795" />
+                  <g
+                     id="g159827">
+                    <g
+                       clip-path="url(#clipPath159799)"
+                       id="g159825">
+                      <g
+                         transform="translate(0,198.30003)"
+                         id="g159807">
+                        <g
+                           id="g159805">
+                          <g
+                             id="g159803">
+                            <path
+                               d="M 184.568,0 C 184.568,0 0.033,-235.652 0,-410.332 -0.021,-523.491 82.636,-594.9 184.568,-594.9 c 101.932,0 184.589,71.409 184.568,184.568 C 369.103,-235.652 184.568,0 184.568,0 Z"
+                               style="fill:#34b1ed;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                               id="path159801" />
+                          </g>
+                        </g>
+                      </g>
+                      <g
+                         transform="translate(62.1871,179.47003)"
+                         id="g159815">
+                        <g
+                           id="g159813">
+                          <g
+                             id="g159811">
+                            <path
+                               d="m 136.453,0 c 49.555,-95.0697 103.483,-223.253 103.501,-331.147 0.021,-129.289 -82.635,-210.876 -184.567,-210.876 -19.298,0 -37.9,2.935 -55.387,8.554 32.578,-27.412 75.42,-42.6 122.38,-42.6 101.935,0 184.589,71.409 184.568,184.565 C 306.92,-246.295 179.486,-59.0847 136.453,0 Z"
+                               style="fill:#000000;fill-opacity:0.05;fill-rule:nonzero;stroke:none"
+                               id="path159809" />
+                          </g>
+                        </g>
+                      </g>
+                      <g
+                         transform="translate(26.0482,-153.04197)"
+                         id="g159823">
+                        <g
+                           id="g159821">
+                          <g
+                             id="g159819">
+                            <path
+                               d="m 72.276,-64.124 c 0,-35.415 -16.179,-64.126 -36.138,-64.126 C 16.181,-128.25 0,-99.539 0,-64.124 0,-28.711 16.181,0 36.138,0 56.097,0 72.276,-28.711 72.276,-64.124 Z"
+                               style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+                               id="path159817" />
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

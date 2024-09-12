@@ -1,0 +1,67 @@
+The images used for the assessments are the same used in the flashcards, which are in assets/flashcards/contents.
+These images are either svg files or png files, given in the format:
+contents/*.svg
+contents*.png
+
+There are 4 different types of possible assessments:
+- pictureWord:
+    Shows a flashcard image and two buttons with two words, one of which matches the flashcard.
+    The user has to pick the correct word.
+- pictureWordDrag:
+    Shows a column of between 3-5 words and another column with the same number of images. with each word corresponding to an image.
+    The user can drag and drop words onto images.
+    When the user drags the word to the corresponding image, it is accepted and displays a tick.
+    Once all the word-image pairs have been matched the next assessement is shown.
+- fillSentenceTwo:
+    Shows line of text with a blank space, and two buttons with options for what to fill the space with.
+    The user has to pick the correct word.
+- fillSentenceThree:
+    Same as fillSentenceTwo, but with 3 options.
+
+assessments.csv:
+The data for each assessment is held in assessments.csv.
+
+Each entry in assesments.csv has 14 fields:
+- id: This is a unique 5-digit id for each assessment. The naming convention is:
+    - first digit: level
+    - second digit: sublevel
+    - third digit: type of assessment
+    - fourth and fifth digits: assessment number within level + sublevel + type, ascending
+- level: The level of flashcard that the assessment corresonds to.
+- sublevel: The sublevel of flashcard that the assessment corresonds to.
+    - Where the assessment has no sublevel, this is set to 0
+- AssessmentType: The type of the assessment. This can be 4 different values:
+    - 0: pictureWord
+    - 1: pictureWordDrag
+    - 2: fillSentenceTwo
+    - 3: fillSentenceThree
+- word1: Can contain a word. Can also be null. What it represents changes depending on the assessment type:
+    - pictureWord: will be null.
+    - dragPictureWord: will contain an Arabic word that will be included in the words that can be matched.
+    - fillSentenceTwo: will contain the sentence with a blank that needs to be filled.
+    - fillSentenceThree: same as fillSentenceTwo
+- word2: Will always contain a word - cannot be null. 
+    For assessment types:
+    - pictureWord
+    - fillSentenceTwo
+    - fillSentenceThree
+    It is always the answer.
+- word3: Will always contain a word - cannot be null.
+- word4: Can contain a word. Can also be null. It is always an aswer option. It is only non-null for assessments of type:
+    - pictureWordDrag with 4 or more options.
+    - fillSentenceThree
+- word5: Can contain a word. Can also be null. It is always an answer option. It is only non-null for pictureWordDrag with 5 options.
+- pic1: Can contain an image path. Will be non-null for assessments of type:
+    - pictureWord
+    - pictureWordDrag
+    Will always be null for other assessment types.
+- pic2: Can contain an image path. Will always be non-null for pictureWordDrag assessments. Will be null otherwise.
+- pic3: Can contain an image path. Will always be non-null for pictureWordDrag assessments. Will be null otherwise.
+- pic4: Can contain an image path. Will only be non-null for pictureWordDrag assessments, but can be null if the assessment has less than 4 options. Will be null otherwise.
+- pic5: Can contain an image path. Will only be non-null for pictureWordDrag assessments, but can be null if the assessment has less than 5 options. Will be null otherwise.
+
+Since parts of assessments.csv is written in Arabic, it is read from right-to-left where words are in Arabic, and left-to-right otherwise.
+For example, in this line of assessments.csv:
+13002,1,3,0,,جيب,خوخ,,,contents/1131_pic.svg,,,,
+The order of fields is:
+id,level,sublevel,type,word1,word3,word2,word4,word5,pic1,pic2,pic3,pic4,pic5

@@ -1,0 +1,28 @@
+All content related to an individual sublevel is displayed sequentially. To do
+this, we can display a widget for this content. Levels have assessments to
+show at the end of the content of their last sublevel too.
+
+In lib/sublevel_widget/sublevel_widget.dart we have:
+    Class SublevelWidget:
+        This is a widget to display the content for a certain sublevel.
+
+        The constructor takes the following fields:
+            - level
+            - sublevel
+                The level and sublevel of the content to show, respectively.
+                For example, to show content for level 3.2, we have level 3
+                and sublevel 2.
+
+            - assess
+                A boolean that is true if we wish to show the level's
+                assessments at the end of the sublevel content. This should be
+                true if the current sublevel is the final sublevel for its
+                corresponding level.
+
+            - onReturn
+                A void callback called when the user returns from the content,
+                i.e. when they press a button to leave early.
+
+            - onDone
+                A void callback called when all content has been displayed.
+                

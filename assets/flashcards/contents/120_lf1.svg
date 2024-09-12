@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="200"
+   height="200"
+   viewBox="0 0 200 200"
+   version="1.1"
+   id="svg37630"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="120_lf1.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview37632"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="1.829812"
+     inkscape:cx="-15.848622"
+     inkscape:cy="77.057095"
+     inkscape:window-width="2040"
+     inkscape:window-height="460"
+     inkscape:window-x="696"
+     inkscape:window-y="28"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs37627">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath49831">
+      <g
+         id="g49837">
+        <g
+           id="g49835">
+          <path
+             d="M 0,340.157 H 226.772 V 0 H 0 Z"
+             id="path49833" />
+        </g>
+      </g>
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       d="m 104.6624,266.0133 c -2.018,0 -3.691,0.687 -5.02,2.063 -1.33,1.375 -1.994,3.208 -1.994,5.5 0,2.109 0.664,3.873 1.994,5.295 1.329,1.421 3.047,2.132 5.158,2.132 4.308,0 6.691,-2.475 7.151,-7.427 0,-4.675 -2.431,-7.198 -7.289,-7.563 m -8.389,-70.137 h -2.063 c -4.582,0 -6.875,2.153 -6.875,6.464 0,1.282 0.481,2.612 1.443,3.988 0.963,1.375 2.775,2.062 5.432,2.062 h 2.751 c 9.901,0 16.365,1.053 19.391,3.164 l 0.275,1.1 c 0.365,1.191 0.551,2.613 0.551,4.263 0,1.65 -0.323,3.301 -0.963,4.951 -0.643,1.65 -1.835,3.851 -3.576,6.601 l -2.338,3.988 10.04,3.989 c 4.032,-7.519 6.05,-15.083 6.05,-22.692 0,-3.761 -0.735,-7.474 -2.201,-11.139 -1.649,-1.743 -4.4,-3.301 -8.251,-4.676 -3.85,-1.376 -10.407,-2.063 -19.666,-2.063"
+       style="fill:#f91536;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="path3744"
+       clip-path="url(#clipPath49831)"
+       transform="matrix(1.3333249,0,0,-1.3333249,-42.484879,391.23059)" />
+  </g>
+</svg>

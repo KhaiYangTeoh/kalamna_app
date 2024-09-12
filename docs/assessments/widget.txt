@@ -1,0 +1,181 @@
+Map colours:
+    A mapping between levels and corresponding colours.
+
+class AssessmentWidget:
+    Stateless widget to display a single assessment on screen.
+
+    Constructor AssessmentWidget({super.key, required this.assessment})
+
+    Widget _picWidget({required string path, required double width}):
+        Widget to display an image in either svg or png format.
+
+        Arguments:
+        - required String path: path of the image to display.
+        - required double width: width of the diplayed image.
+
+    function _width(BuildContext context):
+        Returns the maximum displayable width in the current context.
+
+        Arguments:
+        - context: the current context.
+        
+        Return value: double
+
+class AssessmentStreamWidget:
+    Stateful widget to display a stream of AssessmentWidgets.
+
+    Constructor AssessmentStreamWidget({super.key, required this.assesment, required VoidCallback this.returnToMenu, required VoidCallback this.onDone})
+        Arguments:
+            - required this.assesments: a stream of AssessmentData widgets.
+            - required VoidCallback this.returnToMenu: a function with return type void that is called when returnToMenu is called.
+            - required VoidCallback this.onDone: a function with return type void that is called when onDone is called.
+
+    Widget build(BuildContext context):
+        Overridden function that defines _picWidgets for each picture in the current assessment.
+
+        Arguments:
+            - BuildContext context: current context.
+        
+        Return value: Center widget containing a list of _picWidgets corresponding to the current assessment.
+
+class _AssessmentStreamWidgetState:
+    Holds state for AssessmentStreamWidget, and builds main interface components.
+
+    State:
+        - Stream<AssessmentData> _assessments: stream of AssessmentData widgets to display.
+        - VoidCallback _returnToMenu: Defined by createState() in AssessmentStreamWidget.
+        - VoidCallback _onDone: Defined by createState() in AssessmentStreamWidget.
+        - bool streamDone: Boolean value that indicates if the stream has ended. Initialised to false.
+        - Map<String, bool> matched: A map between words of type String and Boolean values used for assessments of type pictureWordDrag, to indicate if the word has been matched to it's corresponding image.
+        - bool buttonPressed: a Boolean value indicating if a button has already been pressed for that assessment. Prevents widgets from being readded to the _assessments stream more than once. Initally set to false.
+        - bool incorrect:  a Boolean value indicating if the user selected the corrent value or not. Used when adding assessments back into the _assessments stream. Initially set to false. 
+        - int seed: Used to randomise the order of words and images in assessments of type pictureWordDrag.
+        - List<AssessmentData> _assessmentList: A list of all the AssessmentData widgets in the _assessments stream.
+        - int _assessmentIndex: current index of the assessment being displayed in _assessmentList.
+
+    Constructor _AssessmentStreamWidgetState(this._assessments, this._returnToMenu, this.OnDone):
+        Arguments defined in _AssessmentsStreamWidgetState state.
+
+    function _addAssessment(AssessmentData newAssessment):
+        Adds an assessment to _assessmentList to be displayed again.
+
+        Arguments:
+            - AssessmentData newAssessment: AssessmentData widget to be added to _assessmentList.
+        
+    function _getDispIndex():
+        Returns index of the current assessment being displayed.
+
+        Return value: int index of the currently displayed AssessmentData widget in _assessmentList.
+
+    function _nextAssessment():
+        Changes the assessment being displayed to the next to be displayed by incrementing _assessmentIndex.
+        Calls onDone() if there are no more assessments to display.
+
+    function getAssessment():
+        Retuns the AssessmentData widget for the assessment currently being displayed.
+
+        Return value: AssessmentData widget of current assessment.
+
+    function getColor():
+        Returns the corresponding colour of the level number of the assessment as defined in colors.
+
+        Return value: color of the assessment's level.
+
+    function randomiseAns(AssessmentData currentAssessment):
+        Function to randomise words given by AssessmentData of current assessment.
+
+        Arguments:
+            - AssessmentData currentAssessment: AssessmentData widget of current assessment being displayed.
+
+        Return value: List<String> of words in AssessmentData.
+
+    function checkCorrectButton(String buttonText, String answer):
+        Asynchronous function that checks if the corect button was pressed by the user for assessments with buttons, and plays a confetti animation if correct.
+
+        Arguments:
+            - String buttonText: the text of the button selected.
+            - String answer: the answer text of the assessment (always equal to word2).
+
+        Return type: Future<void> - If the button pressed is correct, then await Future.delayed is called to allow the confetti animation to be shown.
+
+    function _widgetWidth(BuildContext context):
+        Returns the maximum displayable width for a widget (Identical to _width defined in AssessmentWidget)
+
+        Arguments:
+            - BuildContext context: current context.
+
+        Return value: max displayable width int.
+
+    function _width(BuildContext context):
+        Returns the current width of the screen.
+
+        Arguments:
+            - BuildContext context: current context.
+        
+        Return value: int screen width.
+
+    double _height(BuildContext context):
+        Returns the maximum displayable height of a widget.
+
+        Arguments:
+            - BuildContext context: current context.
+
+        Return value: max displayable height int.
+
+    Widget _picWidget({required string path, required double width}):
+        Widget to display an image in either svg or png format.
+        Almost Identical to _picWidget defined in AssessmentWidget except getAssessment is called to get the AssessmentData widget of the current assessment.
+
+    Widget _buttons():
+        Retuns Center widget containing buttons for each word in the assessment.
+        Decides if a third button is needed for the assessment depending on the assessment type (if fillSentenceThree, thrid button needed).
+
+        Return value: Centre widget containing buttons for each word in AssessmentData of current assessment.
+
+    Widget dragAndDrop(double width):
+        Returns interface and creates functionality for drag and drop assessment - Creates column for words, and another for images using _buildDragTarget.
+
+        Arguments:
+            - double width: maximum displayable width for widgets.
+
+        Return value: Row widget containing the two columns of the drag and drop
+
+    Widget _buildDragTarget(word, width, choices):
+        Returns drag targets for _dragAndDrop, which are the images words can be dragged onto.
+
+        Arguments:
+            - word: String of the word that matches the image.
+            - width: int of the maximum displayable widget width.
+            - choices: A map between words and their corresponding images within an assessment.
+
+        Return value: DragTarget for each image.
+
+    Widget _mapWidget(int dispIndex, double height):
+        Creates map button to redirect to the map screen in the app.
+
+        Arguments:
+            - int dispIndex: index of the current assessment in _assessmentList.
+            - double height: maximum displayable height of a widget.
+
+        Return value: Align widget containing the map button (called returnButton) that calls _returnToMenu.
+
+    Widget _confetti(width):
+        Defines the positon and properties of the confetti widget.
+
+        Arguments:
+            - width: width of the screen.
+        
+        Return value: Positioned widget with ConfettiWidget as its child.
+
+    Widget build(BuildContext context):
+        Overridden function that defines the layout of each assessment interface.
+
+        Arguments:
+            - BuildContext context: current context.
+        
+        Return value: A SafeArea widget containing all the interface elements (buttons, images, map button, border) in a specified layout.
+
+
+
+    
+

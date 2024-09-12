@@ -1,0 +1,66 @@
+All files related to flashcards are stored in assets/flashcards.
+
+There are two types of flashcards stored: those for letter forms and those for
+pictures/words. In the physical flashcard, the picture/word flashcard is also
+split up into just an picture, both an picture and a word, and just a word - these
+can be derived from just an picture/word flashcard.
+
+All paths are relative to the flashcards directory.
+
+Different flashcard levels also have different border colours.
+
+flashcards.csv:
+    This file contains information for the total set of flashcards. It is
+    formatted as comma-separated values with fields for:
+    - id
+        A unique decimal integer identifier for every flashcard
+
+    - level
+        The main level for the flashcard (1, 2, 3, 4 or 5)
+
+    - sublevel
+        The sublevel for the flashcard, e.g level 1.2 has sublevel 2
+
+    - type
+        The type of a flashcard:
+            - 0
+                A letter forms flashcard
+            - 1
+                An picture/word flashcard
+
+    - image1
+        The is the first image related to the flashcard. In a letter form
+        flashcard, this is the first/only form to show. In a picture/word
+        flashcard, this is the picture to show.
+
+    - image2
+        This is the second image related to the flashcard. In a letter form
+        flashcard, this is the second form to show, or blank if there is only
+        one form to show. In a picture/word flashcard, this is the word to
+        show.
+
+flashcardtxt.csv:
+    This file contains the words corresponding to the ids of certain
+    flashcards. It is formatted as comma-separated values with fields for:
+    - id
+        A unique decimal integer identifier for the corresponding flashcard
+
+    - word
+        An Arabic string for the word to display with the corresponding
+        flashcard
+
+colours.csv:
+    This file contains the colours for each flashcard level, formatted
+    as comma-separated values. It has the fields:
+    - level
+        The main level of the colour (1, 2, 3, 4 or 5)
+
+    - sublevel
+        The sublevel of the colour, e.g. level 1.2 has sublevel 2
+
+    - colour
+        The associated colour, stored as an RGB hex value (e.g. 0xffffff)
+    
+contents/*.svg:
+    These files are svgs for the contents of flashcards, referred to in
+    flashcards.csv

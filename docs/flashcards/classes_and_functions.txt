@@ -1,0 +1,58 @@
+In lib/flashcard/flashcard_data.dart we have:
+    Class FlashcardData:
+        A class representing the data in one flashcard
+        See assets.txt for the information contained by one flashcard
+        
+        This class contains public fields:
+            - int id, level, sublevel
+            - FlashcardType type
+            - String pic1
+            - String pic2
+
+    Enum FlashcardType:
+        An enum representing the type of a flashcard (of letter forms or of a
+        picture/word)
+
+        This enum has values:
+            - letterForm
+            - pictureWord
+
+
+    Function loadFlashcards():
+        A function to load all flashcards from the app's assets, which may be
+        filtered to only include cards from a certain level or sublevel
+
+        Arguments:
+            - int? level
+                The only level to load flashcards from (or null for all levels)
+                This has default value null
+
+            - int? sublevel
+                The only sublevel to load flashcards from (or null for all
+                sublevels)
+                This has default value null
+
+        Return value: Stream<FlashcardData>
+            This is a stream containing all flashcards loaded.
+
+
+In lib/flashcard/flashcard_widget.dart we have:
+    Class FlashcardWidget:
+        This is a widget that displays a given flashcard, given as the field
+        "card" in the constructor of type FlashcardData
+
+    Class FlashcardStreamWidget:
+        This is a widget that displays a given stream of flashcards, with a
+        progress bar and return button at the top, and arrows to navigate.
+
+        The constructor takes the following fields:
+            - cards
+                A Stream<FlashcardData> representing the cards to display
+
+            - onDone
+                A VoidCallback called when the last flashcard has finished
+                displaying
+
+            - onReturn
+                A VoidCallback called when the button to return to the menu is
+                pressed

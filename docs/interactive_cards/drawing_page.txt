@@ -1,0 +1,4 @@
+This file declares a widget, DrawingPage. This widget is the drag and drop widget. 
+
+The constructor takes a String word and a Double width. Word is the Arabic word to be displayed, and width constrains the size
+to ensure that it displays properly within the app. 

@@ -1,0 +1,27 @@
+Data for all books are stored in assets/books. Their pages are stored as PNG
+files in assets/books. The orders of pages and the book each one belongs to
+is stored in a CSV file.
+
+books.csv:
+    This is a CSV containing the contents of each book. It has the following
+    fields:
+        - id
+            An identifier for each book as an integer, corresponding to the
+            overall book number
+            For example, book 8 will have an id of 8
+
+        - level
+            The level of the book
+            For example, level 1 book 2 will have a level of 1
+
+        - level index
+            The index of the book within its book
+            For example, level 1 book 2 will have an index of 2
+
+        - first page
+        - last page
+            The names of the first and last pages of the book as integers
+            For example, if the first page is 1100 and the last page is 1120,
+                then the pages of the book, in order, are 1100.png, 1101.png,
+                1102.png, ..., 1119.png, 1120.png
+
